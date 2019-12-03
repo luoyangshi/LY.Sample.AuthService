@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LY.Sample.AuthService</name>
+    </assembly>
+    <members>
+        <member name="M:LY.Sample.AuthService.Authorize.IUserStore.CheckPermission(System.String,System.String)">
+            <summary>
+            检测用户是否拥有权限
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="permission">权限项</param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Authorize.IUserStore.CheckPassword(System.String,System.String)">
+            <summary>
+            检测用户名密码
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns>用户ID</returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Authorize.IUserStore.CheckVerificationCode(System.String,System.String)">
+            <summary>
+            验证验证码
+            </summary>
+            <param name="phoneoremail"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Authorize.IUserStore.CheckPhoneOrEmailAdd(System.String)">
+            <summary>
+            验证手机或邮箱是否存在，不存在创建用户
+            </summary>
+            <param name="phoneoreamil"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Controllers.AccountController.Register">
+            <summary>
+            注册账号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Controllers.AccountController.Add(LY.Sample.AuthService.Data.ViewModels.AddUserInputDto)">
+            <summary>
+            添加账号
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Controllers.HealthController.Get">
+            <summary>
+            健康检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:LY.Sample.AuthService.Data.ViewModels.ErrorResult.Field">
+            <summary>
+            参数领域
+            </summary>
+        </member>
+        <member name="P:LY.Sample.AuthService.Data.ViewModels.ErrorResult.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:LY.Sample.AuthService.Middleware.AppExceptionHandlerMiddleware.GetApiResponse(System.Exception)">
+            <summary>
+            统一格式响应类
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Middleware.AppExceptionHandlerMiddleware.JsonHandle(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            处理方式：返回Json格式
+            </summary>
+            <param name="context"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LY.Sample.AuthService.Middleware.AppExceptionHandlerMiddleware.PageHandle(Microsoft.AspNetCore.Http.HttpContext,System.Exception,Microsoft.AspNetCore.Http.PathString)">
+            <summary>
+            处理方式：跳转网页
+            </summary>
+            <param name="context"></param>
+            <param name="ex"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LY.Sample.AuthService.Middleware.AppExceptionHandlerOption.HandleType">
+            <summary>
+            异常处理方式
+            </summary>
+        </member>
+        <member name="P:LY.Sample.AuthService.Middleware.AppExceptionHandlerOption.JsonHandleUrlKeys">
+            <summary>
+            Json处理方式的Url关键字
+            <para>仅HandleType=Both时生效</para>
+            </summary>
+        </member>
+        <member name="P:LY.Sample.AuthService.Middleware.AppExceptionHandlerOption.ErrorHandingPath">
+            <summary>
+            错误跳转页面
+            </summary>
+        </member>
+        <member name="T:LY.Sample.AuthService.Middleware.AppExceptionHandleType">
+            <summary>
+            错误处理方式
+            </summary>
+        </member>
+    </members>
+</doc>
